@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <>
     <footer>
-        <div className='bg-[#9DE793] '>
+        <div className='bg-primary '>
             <div className='container xl:mx-auto py-5  px-10'>
                 <div className=' md:py-5 '>
                     <p className='text-[24px] text-white font-bold '>Popular Destinations</p>
@@ -78,7 +78,7 @@ export default function Footer() {
                 </div>
             </div>
         </div>
-        <div className='bg-[#252525]'>
+        <div className='bg-secondary'>
             <div className='container xl:mx-auto  px-10'>
                 <div className='py-10 md:pb-24 pb-12'>
                     <div className='grid grid-cols-1 sm:grid sm:grid-cols-4 md:grid md:grid-cols-5 '>
@@ -120,10 +120,10 @@ export default function Footer() {
             </div>
         </div>
         
-        <div className='bg-black '>
+        <div className='bg-[#252525] border-t'>
             <div className='container xl:mx-auto  px-10'>
                 <div className='text-white sm:flex sm:justify-between py-5 '>
-                    <p> Copyright @ 2023 - Safar Cart</p>
+                    <p> Copyright @ 2023 - Musafir</p>
                     <p>All rights are reserved</p>
                 </div>
                 

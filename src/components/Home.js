@@ -1,8 +1,8 @@
-import React from "react";
+import React,{useRef} from "react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Mousewheel, Pagination, FreeMode } from 'swiper/modules';
+import { Navigation, FreeMode } from 'swiper/modules';
 import backgroundimage from "../media/HUNZA-BLOG-PIC-1-1024x768.svg";
 import mainlogo from "../media/dark_back_logo_1.svg";
 import kalam from "../media/Mask-Group-4.svg"
@@ -16,19 +16,30 @@ import secondSection from "../media/Rectangle 25.png"
 
  
 export default function Home() {
+  const swiperRef = useRef(null);
+
+  const handlePrev = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
+    }
+  };
+
+  const handleNext = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
+  };
   return (
     <>
-      <img src={backgroundimage} className=" object-cover object-center w-full h-full absolute brightness-75 z-[-1] "/>
-      <div className="container px-6 overflow-hidden h-auto">
-      
-        <div className="container absolute inset-0 bg-gradient-to-b from-transparent to-[#252525] z-[-1]"></div>
+      <div className="container bgimage overflow-hidden">
         <nav className=" mx-12 flex justify-between z-10">
           <div className="pt-9">
-            <img className="w-[130px]" src={mainlogo} />
+            {/* <img className="w-[130px]" src={mainlogo} /> */}
+            <h3>LOGO HERE</h3>
           </div>
 
         
-          <div className="mt-12 custom-xl:flex hidden justify-between items-center ">
+          <div className="mt-12 custom-xl:flex hidden justify-between items-center z-50">
             <ul className="flex ml-14">
               <li className="font-bold text-black bg-white py-1 px-8 rounded-[20px]">
                 Home
@@ -48,7 +59,7 @@ export default function Home() {
             
             </ul>
             <ul className="ml-10">
-            <li className="font-bold text-white bg-[#9DE793] py-1 px-8  rounded-[20px]">
+            <li className="font-bold text-white bg-primary py-1 px-8  rounded-[20px]">
                 Contest
               </li>
             </ul>
@@ -57,7 +68,7 @@ export default function Home() {
 
           
 
-          <div className="pt-[52px] custom-xl:block hidden">
+          <div className="pt-[52px] custom-xl:block hidden z-50">
         
             <div className="bg-white flex justify-center items-center rounded-[20px] px-5 py-1">
               <input
@@ -81,7 +92,7 @@ export default function Home() {
 
 
         <SwiperSlide>        
-          <div className='mt-8 container'>
+          <div className='pt-10 container'>
             <div className='py-6  flex items-center'>
                 <div className='w-full'>
                     <div>
@@ -89,6 +100,10 @@ export default function Home() {
                             slidesPerView={5}
                             spaceBetween={30}
                             centeredSlides={false}
+                            navigation={{
+                              prevEl: '.slidePrev-btn',
+                              nextEl: '.slideNext-btn'
+                            }}
                             pagination={{ clickable: true }}
                             breakpoints={{
                                 640: {
@@ -102,16 +117,16 @@ export default function Home() {
                                 },
                             }}
                             speed={500}
-                            modules={[FreeMode]}
+                            modules={[FreeMode,Navigation]}
                             className="innerswiper">
 
                             <SwiperSlide >
                                 <div className='flex flex-col min-w-[500px] ml-12'>
-                                   <h1 className='text-white  text-[54px] leading-tight font-bold'> Safar Cart - <br/>Pakistan ki Sair, <br/> Har Dil Aziz!</h1> 
+                                   <h1 className='text-white  text-[54px] leading-tight font-bold'> Musafir - <br/>Yaadgar Safar<br/>  ka Raasta!</h1> 
                                    <h2 className="text-white  text-[22px] leading-tight mt-4"> Dil Chahata Hai, Sair Karen <br/>Pakistan ki Shan-o-Shaukat ke Sang!</h2>
                                     <div className="flex space-x-3 mt-7">
-                                       <button className="text-black py-2 px-6 bg-[#9DE793] rounded-lg font-bold">Book a tour</button>
-                                      <button className="text-white py-2 px-6 bg-[#495557] rounded-lg font-bold">Contact us</button>
+                                       <button className="text-black py-2 px-6 bg-primary hover:bg-[#5B9C57] transitionCs rounded-lg font-bold">Book a tour</button>
+                                      <button className="text-white py-2 px-6 bg-[#495557] hover:bg-[#3d4647] transitionCs rounded-lg font-bold">Contact us</button>
                                     </div>
                                     <h1 className="text-white text-[36px] font-bold mt-9">Download Our App</h1>
                                     <div className="flex space-x-6 ">        
@@ -191,13 +206,18 @@ export default function Home() {
 
                         </Swiper>
                     </div>
-                    <div className="w-full z-1 flex justify-center items-center flex-col">
-                         <div className="w-full flex justify-end space-x-7 mr-12">
-                             <button className="bg-gray-600 py-[10px] px-3 border border-white rounded-xl rotate-180"> <img className="w-[8px]" src={Arrow} alt="" /> </button>
-                             <button className="bg-gray-600 py-[10px] px-3 border border-white rounded-xl"> <img className="w-[8px]" src={Arrow} alt="" /> </button>
-                         </div>
-                            <h6 className="text-white py-[2px]">Explore</h6>
-                           <img className="w-[40px]" src={downArrow}/></div>  
+                    <div className="w-full relative z-50 flex justify-center items-center flex-col">
+                      <div className="w-full flex justify-end space-x-7 mr-12">
+                        <button onClick={handlePrev} className="slidePrev-btn bg-gray-600 hover:bg-gray-700 transitionCs cursor-pointer py-[10px] px-3 border border-white rounded-xl rotate-180">
+                          <img className="w-[8px]" src={Arrow} alt="" />
+                        </button>
+                        <button onClick={handleNext} className="slideNext-btn bg-gray-600 hover:bg-gray-700 transitionCs cursor-pointer py-[10px] px-3 border border-white rounded-xl">
+                          <img className="w-[8px]" src={Arrow} alt="" />
+                        </button>
+                      </div>
+                      <a href="#explore" className="text-white py-[2px]">Explore</a>
+                      <img className="w-[40px]" src={downArrow} />
+                    </div>
                     </div>              
             </div>
         </div>
@@ -211,7 +231,7 @@ export default function Home() {
 
 
 
-      <div className="bg-[#252525] container px-6">
+      <div className="bg-secondary container px-6" id="explore">
 
         <div className="w-full flex justify-center pt-9 ">
           <ul className="flex space-x-32 text-white text-[20px]">
@@ -222,19 +242,19 @@ export default function Home() {
         </div>
 
 
-        <span className="block w-[550px] mx-auto h-1 bg-white my-3 rounded-md"> <span className="rounded-md block z-1 w-[150px] bg-[#9DE793] h-1"></span></span>                   
+        <span className="block w-[550px] mx-auto h-1 bg-white my-3 rounded-md"> <span className="rounded-md block z-1 w-[150px] bg-primary h-1"></span></span>                   
        
         <div className="flex max-w-[1080px] mx-auto py-14">
           <div className="w-[1300px]">
             <img src={secondSection} alt=""/> 
           </div>
           <div className="flex flex-col ml-14">
-            <h1 className='text-white text-[40px] leading-tight font-bold'> Safar Cart - <br/>Pakistan ki Sair, <br/> Har Dil Aziz!</h1> 
+            <h1 className='text-white text-[40px] leading-tight font-bold'> Musafir - <br/>Pakistan ki Sair, <br/> Har Dil Aziz!</h1> 
             <h2 className="text-white text-[22px] leading-tight mt-4"> Dil Chahata Hai, Sair Karen <br/>Pakistan ki Shan-o-Shaukat ke Sang!</h2>
             <p className="text-white text-[13px] leading-tight mt-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here</p>
             <p className="text-white text-[13px] leading-tight mt-4 mb-12">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here</p>                
           <div>
-            <button className="text-black py-2 px-6 bg-[#9DE793] rounded-lg font-bold">More information</button>
+            <button className="text-black py-2 px-6 bg-primary hover:bg-[#5b9c57] rounded-lg font-bold transitionCs">More information</button>
           </div>
           </div>
         </div>
