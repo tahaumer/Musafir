@@ -29,7 +29,7 @@ export default function Footer() {
                     </div>
                     <div>
                         <div className='mt-5 md:mt-0'>
-                            <p className='text-[20px] font-bold pb-3'>KPK</p>
+                            <p className='text-[20px] font-bold pb-3'>KPKpkpk</p>
                             <p className='text-[16px] font-medium'>Swat</p>
                             <p className='text-[16px] font-medium'>Peshawar</p>
                             <p className='text-[16px] font-medium'>Kalam</p>
