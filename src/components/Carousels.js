@@ -157,7 +157,7 @@ function Carousels() {
 
   return (
     <>
-      <div className="container py-20 bg-secondary">
+      <div className="container py-20 bg-secondary" id="tour-&-packages">
         <div className="flex justify-between items-center px-10  mb-5">
           <h1 className="text-white text-4xl font-semibold">Tour Packages</h1>
           <a

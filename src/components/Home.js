@@ -15,7 +15,6 @@ import downArrow from "../media/Path 4.svg"
 import Arrow from "../media/Icon ionic-ios-arrow-forward.png"
 import MultiPart from "./MultiPart";
 
-
 export default function Home() {
   const swiperRef = useRef(null);
 
@@ -39,31 +38,24 @@ export default function Home() {
           </div>
 
 
-          <div className="mt-12 custom-xl:flex hidden justify-between items-center z-50">
+          <div id="home" className="mt-12 custom-xl:flex hidden justify-between items-center z-50">
             <ul className="flex ml-14">
-              <li className="font-bold text-black bg-white py-1 px-8 rounded-[20px]">
-                Home
+              <li className="font-bold text-black py-1 px-8 rounded-[20px]">
+                <a href='#home'>Home</a>
               </li>
-              <li className="font-normal text-white py-1 px-7 rounded-[20px]">
-                Destination
+              <li className="font-bold text-black py-1 px-7 rounded-[20px]">
+                <a href='#explore'> Explore</a>
               </li>
-              <li className="font-normal text-white py-1 px-7 rounded-[20px]">
-                Tour & Packages
+              <li className="font-bold text-black py-1 px-7 rounded-[20px]">
+                <a href='#tour-&-packages'>Tour & Packages</a>
               </li>
-              <li className="font-normal text-white py-1 px-7 rounded-[20px]">
-                Company
+              <li className="font-bold text-black py-1 px-7 rounded-[20px]">
+                <a href='#gallery'>Gallery</a>
               </li>
-              <li className="font-normal text-white py-1 px-7 rounded-[20px]">
-                Blog
-              </li>
-
-            </ul>
-            <ul className="ml-10">
-              <li className="font-bold text-white bg-primary py-1 px-8  rounded-[20px]">
-                Contest
+              <li className="font-bold text-black py-1 px-7 rounded-[20px]">
+                <a href='#contact'>Contact</a>
               </li>
             </ul>
-
           </div>
 
 
@@ -147,7 +139,7 @@ export default function Home() {
                             <img src={kalam} className={`slideimage object-cover object-center w-full h-full mb-1 DragActive1`} alt="" />
                           </div>
                           <h1 className="text-white font-bold text-[18px] opacity-100 ml-5 pt-2">Kalam</h1>
-                          <p className="text-[13px] text-white truncate ml-5">Renowned for its lush meadows, waterfalls</p>
+                          <p className="text-[13px] text-white truncate ml-5">Nature's paradise, serene rivers, lush greenery.</p>
                         </div>
                       </div>
                     </SwiperSlide>
@@ -160,7 +152,7 @@ export default function Home() {
                             <img src={multan} className={`slideimage object-cover object-center w-full h-full mb-1 DragActive1`} alt="" />
                           </div>
                           <h1 className="text-white font-bold text-[18px] opacity-100 ml-5 pt-2">Multan</h1>
-                          <p className="text-[13px] text-white truncate ml-5">Renowned for its lush meadows, waterfalls</p>
+                          <p className="text-[13px] text-white truncate ml-5">City of Saints, history and culture</p>
                         </div>
                       </div>
                     </SwiperSlide>
@@ -173,7 +165,7 @@ export default function Home() {
                             <img src={hunza} className={`slideimage object-cover object-center w-full h-full mb-1 DragActive1`} alt="" />
                           </div>
                           <h1 className="text-white font-bold text-[18px] opacity-100 ml-5 pt-2">Hunza</h1>
-                          <p className="text-[13px] text-white truncate ml-5">Renowned for its lush meadows, waterfalls</p>
+                          <p className="text-[13px] text-white truncate ml-5">Majestic mountains, peace, breathtaking views</p>
                         </div>
                       </div>
                     </SwiperSlide>
@@ -186,7 +178,7 @@ export default function Home() {
                             <img src={nelumValey} className={`slideimage object-cover object-center w-full h-full mb-1 DragActive1`} alt="" />
                           </div>
                           <h1 className="text-white font-bold text-[18px] opacity-100 ml-5 pt-2">Neelum Valley</h1>
-                          <p className="text-[13px] text-white truncate ml-5">Renowned for its lush meadows, waterfalls</p>
+                          <p className="text-[13px] text-white truncate ml-5">Emerald valleys, rivers, untouched tranquility.</p>
                         </div>
                       </div>
                     </SwiperSlide>
@@ -199,7 +191,7 @@ export default function Home() {
                             <img src={Kashmir} className={`slideimage object-cover object-center w-full h-full mb-1 DragActive1`} alt="" />
                           </div>
                           <h1 className="text-white font-bold text-[18px] opacity-100 ml-5 pt-2">Kashmir</h1>
-                          <p className="text-[13px] text-white truncate ml-5">Renowned for its lush meadows, waterfalls</p>
+                          <p className="text-[13px] text-white truncate ml-5">Heaven on earth, beauty and peace</p>
                         </div>
                       </div>
                     </SwiperSlide>
@@ -223,9 +215,9 @@ export default function Home() {
           </div>
 
         </SwiperSlide>
-                  
+
       </div>
-      <MultiPart/>
+      <MultiPart />
     </>
   );
 }

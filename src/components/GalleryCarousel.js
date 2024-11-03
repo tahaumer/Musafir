@@ -58,7 +58,7 @@ export default class Example extends Component {
   render() {
     return (
     <>  
-        <h1 className="text-center text-white text-4xl">Tour Gallery</h1>
+        <h1 className="text-center text-white text-4xl" id="gallery">Tour Gallery</h1>
         <h1 className="text-center text-primary text-[13px]">Photos from recent trips</h1>
         <div className="flex container justify-center items-center">
             <button onClick={() => this.setState({ goToSlide: this.state.goToSlide - 1 })}>
