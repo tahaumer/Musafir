@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../media/footerImages/Path 94.png'
+import logo from '../media/logo.png'
 import pio from '../media/footerImages/Group 8.png'
 import vector7 from '../media/footerImages/Path 92.png'
 import vector8 from '../media/footerImages/Path 93.png'
@@ -83,31 +83,31 @@ export default function Footer() {
                 <div className='py-10 md:pb-24 pb-12'>
                     <div className='grid grid-cols-1 sm:grid sm:grid-cols-4 md:grid md:grid-cols-5 '>
                         <div className=' '>
-                            <img src={logo} />
-                            <p className='text-[12px] text-white pt-3'>Lorem ipsum dolor sit amet consectetur. Vitae nisl volutpat vitae tortor lectus.</p>
+                            <img src={logo} alt="logo" width={140}/>
+                            <p className='text-[12px] text-white pt-3'> Dil Chahata Hai, Sair Karen <br />Pakistan ki Shan-o-Shaukat ke Sang!</p>
                         </div>
                         <div className='text-white md:leading-7 mt-5 sm:mt-0'>
-                            <p className='text-[16px] font-bold pb-2'>Company</p>
-                            <p  className='text-[14px] font-medium'>About US</p>
-                            <p  className='text-[14px] font-medium'>FAQs</p>
-                            <p  className='text-[14px] font-medium'>Contact us</p>
+                            <p className='text-[16px] hover:text-primary cursor-pointer w-fit font-bold pb-2'>Company</p>
+                            <p className='text-[14px] hover:text-primary cursor-pointer w-fit font-medium'>About US</p>
+                            <p className='text-[14px] hover:text-primary cursor-pointer w-fit font-medium'>FAQs</p>
+                            <p className='text-[14px] hover:text-primary cursor-pointer w-fit font-medium'>Contact us</p>
                         </div>
                         <div className='text-white md:leading-7 mt-5 sm:mt-0'>
-                            <p className='text-[16px] font-bold pb-2'>Legal</p>
-                            <p  className='text-[14px] font-medium'>Refunds Policy</p>
-                            <p  className='text-[14px] font-medium'>terms & Conditions</p>
-                            <p  className='text-[14px] font-medium'>Privacy Policy</p>
-                            <p  className='text-[14px] font-medium'>Rules for Tourism</p>
+                            <p className='text-[16px] hover:text-primary cursor-pointer w-fit font-bold pb-2'>Legal</p>
+                            <p className='text-[14px] hover:text-primary cursor-pointer w-fit font-medium'>Refunds Policy</p>
+                            <p className='text-[14px] hover:text-primary cursor-pointer w-fit font-medium'>terms & Conditions</p>
+                            <p className='text-[14px] hover:text-primary cursor-pointer w-fit font-medium'>Privacy Policy</p>
+                            <p className='text-[14px] hover:text-primary cursor-pointer w-fit font-medium'>Rules for Tourism</p>
                         </div>
                         <div className='text-white md:leading-7 mt-5 sm:mt-0'>
-                            <p className='text-[16px] font-bold pb-2' >Popular Categories</p>
-                            <p  className='text-[14px] font-medium'>Faisal Masjid</p>
-                            <p  className='text-[14px] font-medium'>Katas Raj Temple</p>
-                            <p  className='text-[14px] font-medium'>Nankana Sahib</p>
-                            <p  className='text-[14px] font-medium'>Wahga Border</p>
+                            <p className='text-[16px] hover:text-primary cursor-pointer w-fit font-bold pb-2' >Popular Categories</p>
+                            <p className='text-[14px] hover:text-primary cursor-pointer w-fit font-medium'>Faisal Masjid</p>
+                            <p className='text-[14px] hover:text-primary cursor-pointer w-fit font-medium'>Katas Raj Temple</p>
+                            <p className='text-[14px] hover:text-primary cursor-pointer w-fit font-medium'>Nankana Sahib</p>
+                            <p className='text-[14px] hover:text-primary cursor-pointer w-fit font-medium'>Wahga Border</p>
                         </div>
                         <div className='text-white md:ml-5 lg:m-0 mt-5 md:mt-0'>
-                            <p className='text-[16px] font-bold pb-3'>Social Media</p>
+                            <p className='text-[16px] hover:text-primary cursor-pointer w-fit font-bold pb-3'>Social Media</p>
                             <div className='flex gap-5  '>
                                 <img src={vector7}/>
                                 <img src={pio}/>

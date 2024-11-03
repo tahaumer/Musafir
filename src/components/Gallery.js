@@ -13,7 +13,7 @@ import vector11 from '../media/carousel/Rectangle 29.png'
 export default function Gallery() {
   return (
     <>
-    <div className='bg-secondary py-20 '>
+    <div className='bg-secondary pt-20 '>
     <div className='container px-6 mx-auto'>
     <div className=' pb-10 items-center justify-center'>
         <p className='text-[40px] font-bold text-white text-center'>Popular Destinations</p>

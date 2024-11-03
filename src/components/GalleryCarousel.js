@@ -6,13 +6,6 @@ import image1 from "../media/carousel/Rectangle 28.png";
 import image2 from "../media/carousel/Rectangle 29.png";
 import image3 from "../media/carousel/Rectangle 30.png";
 import image4 from "../media/carousel/Rectangle 38.png";
-import rightArrow from "../media/carousel/Icon ionic-ios-arrow-forward.svg"
-
-const getTouches = (evt) => {
-  return (
-    evt.touches || evt.originalEvent.touches // browser API
-  );
-};
 
 export default class Example extends Component {
   state = {
@@ -55,7 +48,8 @@ export default class Example extends Component {
     {
       key: uuidv4(),
       content: <img src={image4} alt="Image 8" />
-    }
+    },
+    
   ].map((slide, index) => {
     return { ...slide, onClick: () => this.setState({ goToSlide: index }) };
   });
@@ -72,7 +66,7 @@ export default class Example extends Component {
                     <path id="Icon_ionic-ios-arrow-forward" data-name="Icon ionic-ios-arrow-forward" d="M29.635,59.177,70.007,19.1a7.509,7.509,0,0,0,0-10.7,7.724,7.724,0,0,0-10.8,0L13.467,53.811a7.526,7.526,0,0,0-.222,10.446l45.931,45.73a7.7,7.7,0,0,0,10.8,0,7.509,7.509,0,0,0,0-10.7Z" transform="translate(-11.246 -6.196)" />
                 </svg>
             </button>
-            <div className="w-[70%] h-[350px] ml-10 mb-[100px]">
+            <div className="w-[70%] h-[350px] ml-10">
                 <Carousel
                 slides={this.slides}
                 goToSlide={this.state.goToSlide}
@@ -84,7 +78,8 @@ export default class Example extends Component {
                 style={{
                     display: "flex",
                     justifyContent: "space-around",
-                    marginTop: "10px"
+                    marginTop: "10px",
+                    overflow: 'hidden'
                 }}
                 >
                 </div>
